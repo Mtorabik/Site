@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background: black;
+    color: #F5ECD5;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('cyber-pattern.jpg');
+    opacity: 0.6;
+    z-index: -1;
+}
+
+header {
+    padding: 20px;
+    font-size: 1.8em;
+    text-shadow: 0 0 10px cyan;
+}
+
+section {
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.box {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.3em;
+    height: 180px;
+    overflow: hidden;
+    width: 520px;
+    margin: 20px auto;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px cyan;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: cyan;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+.icon {
+    width: 24px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+footer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #F5ECD5;
+}
+
+@media (max-width: 768px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+    .box {
+        font-size: 1em;
+        height: auto;
+    }
+}
+.box ul li a {
+    text-decoration: none;
+    color: #F5ECD5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+.box ul li a:hover span {
+    color: cyan;
+}
+
+.box ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.box ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* استایل بخش رزومه */
+#resume-container {
+    display: flex;
+    justify-content: center;  /* وسط‌چین افقی */
+    align-items: center;  /* وسط‌چین عمودی */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* استایل خود باکس رزومه */
+#resume {
+    background-color: #1E1E1E; /* تم دارک */
+    padding: 25px;
+    border-radius: 10px;
+    color: #F5ECD5;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid cyan; /* نئونی */
+}
+
+/* استایل تیتر */
+#resume h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: cyan;
+}
+
+/* استایل دکمه دانلود */
+.resume-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid cyan;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #F5ECD5;
+    transition: all 0.3s ease-in-out;
+}
+
+/* تغییر رنگ هنگام هاور */
+.resume-btn:hover {
+    background: cyan;
+    color: #1E1E1E;
+    box-shadow: 0 0 10px cyan;
+}
+
+/* استایل آیکون دانلود */
+.resume-btn .icon {
+    width: 28px;
+    height: 28px;
+    filter: invert(1); /* سفید کردن آیکون */
+}
+
+
+@media (max-width: 768px) {
+    body {
+        zoom: 1;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .resume-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
